@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="top">
+        <div class="title"><h1>My Blog</h1></div>
+           </div>
+        <div class="content">
+            <div class="card">
+                <h2>
+                    {%for blog in blogs:%}
+                        {% if blog["id"] == post_id: %}
+                            {{blog["title"]}}
+                        {%endif%}
+                    {% endfor %}
+                </h2>
+                <p>
+                    {%for blog in blogs:%}
+                        {% if blog["id"] == post_id: %}
+                            {{blog["subtitle"]}}
+                        {%endif%}
+                    {% endfor %}
+                </p>
+                <p>
+                    {%for blog in blogs:%}
+                        {% if blog["id"] == post_id: %}
+                            {{blog["body"]}}
+                        {%endif%}
+                    {% endfor %}
+                </p>
+            </div>
+
+    </div>
+</div>
+</body>
+<footer>
+    <p>Made with ♥️ in London.</p>
+</footer>
+</html>
